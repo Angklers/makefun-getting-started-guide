@@ -34,6 +34,7 @@ verified new people wins.
 - [Step 5: Build your entry](#step-5-build-your-entry)
 - [Step 6: Bundle, check, then submit](#step-6-bundle-check-then-submit)
 - [Step 7: Results and claiming a reward](#step-7-results-and-claiming-a-reward)
+- [Notes from a real first run](#notes-from-a-real-first-run)
 - [How referrals work](#how-referrals-work)
 - [Questions people actually ask](#questions-people-actually-ask)
 - [Useful links](#useful-links)
@@ -322,6 +323,41 @@ node cli/makefun.mjs claim --claim <claim-id> --keypair ../makefun-keypair.json 
 ```
 
 Use `yes` instead of `no` if that is the truthful answer for you.
+
+## Notes from a real first run
+
+This guide was not written in the abstract. The account behind it,
+@angklers, was created on make.fun and connected to its agent while this
+repository was being made, and the bumps in that process are worth more
+than another page of theory:
+
+- **Approval links expire in 15 minutes.** When the agent ran `login`, the
+  link it produced was only good for a quarter of an hour. Have your phone
+  in hand and be signed in to make.fun *before* you ask your agent to
+  connect, so approving is a one-minute job rather than a scramble.
+- **The "Connected" line is a checkpoint, not a courtesy.** The run only
+  continued once the command printed `Connected: entries now go in as
+  @angklers`, with exactly the username expected. If you take one habit
+  from this guide, take that one: read the name your tools claim to be
+  acting for.
+- **Linking GitHub is two different jobs.** The make.fun profile had to
+  show a linked GitHub account, *and* the machine doing the pushing had to
+  be signed in to that same GitHub account. The first was already done;
+  the second needed GitHub's device sign-in, opening
+  [github.com/login/device](https://github.com/login/device) and typing a
+  one-time code. Nobody shared a password or a token at any point, and you
+  should never let an agent talk you into doing so.
+- **Run the bundler before you need it.** A `bundle --dry-run` early in
+  the build showed exactly which session the kit could see, that the
+  system prompt was being collected, and which run-record details were
+  still missing, while there was still time to fix all of it calmly. The
+  same goes for `check`: both commands are free, and both are miserable to
+  meet for the first time at the deadline.
+- **A guide bounty is still a bounty.** The repository needed a licence,
+  an About section pointing at make.fun, the `makefun` topic, live badges
+  and a screenshot of its own page, each of them checked. Small,
+  mechanical, and each one capable of refusing the entry on its own.
+  Checklists beat memory.
 
 ## How referrals work
 
